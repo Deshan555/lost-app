@@ -80,3 +80,55 @@
   font-size: 12px !important;
   border-radius: 8px !important;
 }
+
+.primery-button {
+  width: 90px !important;
+  height: 38px !important;
+  border-radius: 8px !important;
+  background-color: #6011E8 !important;
+  border: none !important;
+  color: white !important;
+  cursor: pointer !important;
+}
+
+.primery-button:hover {
+  background-color: #B58FF6 !important;
+}
+
+.primery-button:active {
+  background-color: #6011E8 !important;
+}
+
+.cancle-button {
+  width: 90px !important;
+  height: 38px !important;
+  border-radius: 8px !important;
+  background-color: #fa3e3e !important;
+  border: none !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+}
+
+.cancle-button:hover {
+  background-color: #B58FF6 !important;
+  color: rgb(232, 134, 134) !important;
+}
+
+.cancle-button:active {
+  background-color: #F2F2F2 !important;
+  color: #e52c2c !important;
+}
+
+.previous-button {
+  width: 90px !important;
+  height: 38px !important;
+  border-radius: 8px !important;
+  background-color: #ABAAB2 !important;
+  border: none !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+}
+.previous-button:hover {
+  background-color: #B58FF6 !important;
+  color: white !important;
+}
