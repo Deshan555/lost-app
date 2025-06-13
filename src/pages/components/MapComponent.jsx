@@ -31,6 +31,10 @@ const MapComponent = ({ lat, lng }) => {
             markerInstance.current = new google.maps.Marker({
                 position: position,
                 map: mapInstance.current,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+                    scaledSize: new google.maps.Size(25, 25),
+                },
             });
             const infoWindow = new google.maps.InfoWindow();
 
@@ -40,16 +44,17 @@ const MapComponent = ({ lat, lng }) => {
                 infoWindow.open(mapInstance.current, markerInstance.current);
             });
         });
-    }, []);
-useEffect(() => {
-    if (mapInstance.current && markerInstance.current) {
-        const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
-        mapInstance.current.setCenter(position);
-        markerInstance.current.setPosition(position);
-    }
-}, [lat, lng]);
+    }, [apiKey, lat, lng]);
 
-        return <div ref={mapRef} style={{ height: "300px", width: "100%" }} />;
+    useEffect(() => {
+        if (mapInstance.current && markerInstance.current) {
+            const position = { lat: parseFloat(lat), lng: parseFloat(lng) };
+            mapInstance.current.setCenter(position);
+            markerInstance.current.setPosition(position);
+        }
+    }, [lat, lng]);
+
+    return <div ref={mapRef} style={{ height: "300px", width: "100%" }} />;
 };
 
 export default MapComponent;
